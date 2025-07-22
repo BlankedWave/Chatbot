@@ -1,4 +1,4 @@
-const apiKey = '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'; // Don't push this to GitHub
+const apiKey = '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'; // Don't push this to GitHub
 
 const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('user-input');
