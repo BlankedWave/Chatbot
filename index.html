@@ -231,7 +231,7 @@
         const res = await fetch('https://backend.buildpicoapps.com/aero/run/llm-api?pk=v1-Z0FBQUFBQm5HUEtMSjJkakVjcF9IQ0M0VFhRQ0FmSnNDSHNYTlJSblE0UXo1Q3RBcjFPcl9YYy1OZUhteDZWekxHdWRLM1M1alNZTkJMWEhNOWd4S1NPSDBTWC12M0U2UGc9PQ==', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ prompt: "Sila jawab dalam Bahasa Melayu sahaja: " + prompt })
+          body: JSON.stringify({ prompt: "Sila jawab dalam Bahasa Melayu sahaja: " + prompt }) //preset untuk ai jawab dalam bahasa melayu sahaja.
         });
         const data = await res.json();
         return data.status === 'success' ? data.text : "⚠️ Maaf, saya tidak dapat memproses permintaan.";
