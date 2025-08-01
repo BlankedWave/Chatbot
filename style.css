@@ -1,47 +1,15 @@
-/* Scrollbar styling */
-#chatbox {
-  scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 #f8fafc;
+body[data-theme='dark'] {
+  background-color: #1a202c;
+  color: #e2e8f0;
 }
 
-#chatbox::-webkit-scrollbar {
-  width: 6px;
+body[data-theme='dark'] #messages {
+  background-color: #2d3748;
 }
 
-#chatbox::-webkit-scrollbar-track {
-  background: #f8fafc;
-}
-
-#chatbox::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1;
-  border-radius: 10px;
-}
-
-/* Message animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#chatbox > div {
-  animation: fadeInUp 0.3s ease-in-out;
-}
-
-/* Input focus ring */
-input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
-  transition: box-shadow 0.2s ease-in-out;
-}
-
-/* Custom font (optional) */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body[data-theme='dark'] aside,
+body[data-theme='dark'] header,
+body[data-theme='dark'] footer {
+  background-color: #2d3748;
+  color: #e2e8f0;
 }
