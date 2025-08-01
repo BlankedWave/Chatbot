@@ -114,6 +114,54 @@
       background-color: #0097a7;
     }
 
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1a1a1a;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #00acc1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    #disclaimerPopup {
+      position: fixed;
+      bottom: 140px;
+      right: 20px;
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      border-radius: 10px;
+      padding: 15px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      max-width: 280px;
+      font-size: 0.9rem;
+      z-index: 1000;
+      animation: popIn 0.4s ease-out;
+    }
+
+    #disclaimerPopup button {
+      margin-top: 10px;
+      background-color: #856404;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+
+    #disclaimerPopup button:hover {
+      background-color: #6c4f02;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(5px); }
       to { opacity: 1; transform: translateY(0); }
@@ -146,6 +194,17 @@
     <textarea id="composerInput" rows="1" placeholder="Taip mesej anda..."></textarea>
     <button id="sendBtn">Hantar</button>
   </div>
+
+  <!-- Popup Clippy-style -->
+  <div id="disclaimerPopup">
+    🤖 Hai! Saya adalah chatbot GPT-3 (OpenAI) dengan data hanya sehingga tahun 2021. Jawapan mungkin tidak terkini.
+    <button onclick="closeDisclaimer()">Tutup</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 <a href="https://github.com/BlankedWave" target="_blank">BlankedWave</a>. Semua hak cipta terpelihara.
+  </footer>
 
   <script>
     const messagesEl = document.getElementById('messages');
@@ -206,6 +265,10 @@
         sendMessage();
       }
     });
+
+    function closeDisclaimer() {
+      document.getElementById('disclaimerPopup').style.display = 'none';
+    }
 
     // Mesej permulaan
     window.addEventListener('DOMContentLoaded', () => {
